@@ -1,6 +1,11 @@
 package com.spring.basic.learningSpringBoot;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
+    @Autowired
     private SortAlgorithm sortAlgorithm;
 
     public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
@@ -9,8 +14,8 @@ public class BinarySearchImpl {
     }
 
     public int binarySearch(int [] numbers, int numberToSearchFor){
-        int[] sortedNumbers = SortAlgorithm.sort(numbers);
-        //Implementing Sorting logic
+        int[] sortedNumbers = sortAlgorithm.sort(numbers);
+        System.out.println(sortAlgorithm);
 
         return 3;
     }
