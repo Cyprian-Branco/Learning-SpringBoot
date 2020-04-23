@@ -1,6 +1,5 @@
 package com.spring.basic.learningSpringBoot;
 
 public interface SortAlgorithm {
-    static void sort(int[] numbers) {
-    }
+    public int[] sort(int[] numbers);
 }
